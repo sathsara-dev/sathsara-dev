@@ -10,28 +10,32 @@
       <feDropShadow dx="0" dy="0" stdDeviation="10" flood-color="#ffffff" flood-opacity="0.2" />
     </filter>
     <clipPath id="header-clip"><rect width="780" height="180" rx="24" /></clipPath>
+
+    <!-- Circular Clip Path for Profile Photo -->
+    <clipPath id="avatar-clip">
+      <circle cx="75" cy="90" r="42" />
+    </clipPath>
   </defs>
 
   <g transform="translate(10, 10)">
+    <!-- Base Glass Panel -->
     <rect width="780" height="180" rx="24" fill="#ffffff" fill-opacity="0.05" filter="url(#outer-glow)" />
     <rect width="780" height="180" rx="24" fill="#ffffff" fill-opacity="0.05" filter="url(#glass-distortion)" opacity="0.8" />
-    
+
     <g clip-path="url(#header-clip)">
       <rect width="780" height="180" rx="24" fill="none" stroke="#999999" stroke-opacity="0.75" stroke-width="45" filter="url(#inner-glow-blur)" />
     </g>
     <rect width="780" height="180" rx="24" fill="none" stroke="#ffffff" stroke-opacity="0.2" stroke-width="1" />
 
-    <!-- Avatar Circle -->
-    <circle cx="70" cy="90" r="38" fill="#ffffff" fill-opacity="0.08" stroke="#3b82f6" stroke-width="2" />
-    <g transform="translate(50, 70)" stroke="#3b82f6" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
-      <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" transform="scale(1.6) translate(-3, -3)" />
-      <circle cx="20" cy="12" r="7" />
-    </g>
+    <!-- Profile Photo Avatar -->
+    <image href="https://github.com/sathsara-dev.png" x="33" y="48" width="84" height="84" preserveAspectRatio="xMidYMid slice" clip-path="url(#avatar-clip)" />
+    <!-- Blue Accent Ring around Photo -->
+    <circle cx="75" cy="90" r="42" fill="none" stroke="#3b82f6" stroke-width="2.5" />
 
     <!-- Header Details -->
-    <text x="135" y="75" fill="#ffffff" font-family="system-ui, -apple-system, sans-serif" font-size="28" font-weight="700">sathsara</text>
-    <text x="135" y="105" fill="#3b82f6" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="600">the digital reality developer.</text>
-    <text x="135" y="132" fill="#e0e6ed" fill-opacity="0.75" font-family="system-ui, -apple-system, sans-serif" font-size="13">💻 Full-Stack &amp; Systems Developer | 🚀 470+ Contributions this year</text>
+    <text x="145" y="75" fill="#ffffff" font-family="system-ui, -apple-system, sans-serif" font-size="28" font-weight="700">sathsara</text>
+    <text x="145" y="105" fill="#3b82f6" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="600">the digital reality developer.</text>
+    <text x="145" y="132" fill="#e0e6ed" fill-opacity="0.75" font-family="system-ui, -apple-system, sans-serif" font-size="13">💻 Full-Stack &amp; Systems Developer | 🚀 470+ Contributions this year</text>
 
     <!-- Status Badge -->
     <rect x="620" y="30" width="130" height="30" rx="15" fill="#ffffff" fill-opacity="0.1" stroke="#ffffff" stroke-opacity="0.2" />
