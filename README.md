@@ -1,6 +1,18 @@
 <div align="center">
 
-  <!-- Liquid Glass Card Display -->
-  <img src="./liquid-glass-card.svg" alt="Liquid Glass Profile Card" width="420" />
+  <!-- Header Card -->
+  <img src="./header-card.svg" alt="Sathsara Header Card" width="100%" />
+
+  <br />
+  <br />
+
+  <!-- Skills Card -->
+  <img src="./skills-card.svg" alt="Skills Card" width="100%" />
+
+  <br />
+  <br />
+
+  <!-- Projects Card -->
+  <img src="./projects-card.svg" alt="Projects Card" width="100%" />
 
 </div>
