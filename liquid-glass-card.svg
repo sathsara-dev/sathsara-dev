@@ -1,0 +1,71 @@
+<svg width="420" height="320" viewBox="0 0 420 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- 1. Liquid Glass Distortion Filter -->
+    <filter id="glass-distortion" x="-10%" y="-10%" width="120%" height="120%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.002 0.002" numOctaves="2" seed="92" result="noise" />
+      <feGaussianBlur in="noise" stdDeviation="2" result="blurred" />
+      <feDisplacementMap in="SourceGraphic" in2="blurred" scale="3" xChannelSelector="R" yChannelSelector="G" />
+    </filter>
+
+    <!-- 2. Heavy Inner Glow Blur (Exact 50px Spread replica) -->
+    <filter id="inner-glow-blur">
+      <feGaussianBlur stdDeviation="20" />
+    </filter>
+
+    <!-- 3. Outer Soft Drop Shadow -->
+    <filter id="outer-glow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="0" stdDeviation="10" flood-color="#ffffff" flood-opacity="0.2" />
+    </filter>
+
+    <!-- 4. Clip Path to keep the Inner Glow INSIDE the card borders -->
+    <clipPath id="card-clip">
+      <rect width="400" height="300" rx="28" />
+    </clipPath>
+  </defs>
+
+  <g transform="translate(10, 10)">
+    <!-- 1. Translucent Base Glass Panel -->
+    <rect width="400" height="300" rx="28" fill="#ffffff" fill-opacity="0.05" filter="url(#outer-glow)" />
+
+    <!-- 2. Liquid Distortion Filter Layer -->
+    <rect width="400" height="300" rx="28" fill="#ffffff" fill-opacity="0.05" filter="url(#glass-distortion)" opacity="0.8" />
+
+    <!-- 3. EXACT INSET GLOW (box-shadow: inset 0 0 50px 18px rgba(153, 153, 153, 0.7)) -->
+    <g clip-path="url(#card-clip)">
+      <!-- Clipped thick blurred stroke creates a deep 50px inner shadow inside the card -->
+      <rect width="400" height="300" rx="28" fill="none" stroke="#999999" stroke-opacity="0.75" stroke-width="45" filter="url(#inner-glow-blur)" />
+    </g>
+
+    <!-- Outer Border Accent -->
+    <rect width="400" height="300" rx="28" fill="none" stroke="#ffffff" stroke-opacity="0.2" stroke-width="1" />
+
+    <!-- 4. User Info Section -->
+    <!-- Avatar Circle (#3b82f6) -->
+    <circle cx="50" cy="45" r="20" fill="#ffffff" fill-opacity="0.1" stroke="#3b82f6" stroke-width="2" />
+    <g transform="translate(40, 35)" stroke="#3b82f6" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" transform="scale(0.83) translate(-2, -2)" />
+      <circle cx="10" cy="6" r="3.5" />
+    </g>
+
+    <!-- User Name & Role -->
+    <text x="82" y="42" fill="#ffffff" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="600">Jane Doe</text>
+    <text x="82" y="58" fill="#ffffff" fill-opacity="0.7" font-family="system-ui, -apple-system, sans-serif" font-size="12">UX Designer</text>
+
+    <!-- Notification Icon -->
+    <g transform="translate(345, 33)" stroke="#ffffff" stroke-opacity="0.5" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9" transform="scale(0.75)" />
+      <path d="M13.73 21a2 2 0 0 1-3.46 0" transform="scale(0.75)" />
+    </g>
+
+    <!-- 5. Card Body Section -->
+    <text x="200" y="118" text-anchor="middle" fill="#ffffff" font-family="system-ui, -apple-system, sans-serif" font-size="18" font-weight="700">Styled Component</text>
+    <text x="200" y="142" text-anchor="middle" fill="#ffffff" fill-opacity="0.7" font-family="system-ui, -apple-system, sans-serif" font-size="13">This is a sample of how your content might look inside.</text>
+
+    <!-- Glass Button -->
+    <rect x="40" y="168" width="320" height="40" rx="8" fill="#ffffff" fill-opacity="0.1" stroke="#ffffff" stroke-opacity="0.2" stroke-width="1" />
+    <text x="200" y="193" text-anchor="middle" fill="#ffffff" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="600">Get Started</text>
+
+    <!-- Tip Text -->
+    <text x="200" y="242" text-anchor="middle" fill="#e0e6ed" font-family="system-ui, -apple-system, sans-serif" font-size="12">Tip: Try adjusting the sliders and colors to see real-time changes!</text>
+  </g>
+</svg>
