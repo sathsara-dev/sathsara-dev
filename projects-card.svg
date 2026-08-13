@@ -1,0 +1,43 @@
+<svg width="800" height="240" viewBox="0 0 800 240" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="glass-distortion-3" x="-10%" y="-10%" width="120%" height="120%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.002 0.002" numOctaves="2" seed="92" result="noise" />
+      <feGaussianBlur in="noise" stdDeviation="2" result="blurred" />
+      <feDisplacementMap in="SourceGraphic" in2="blurred" scale="3" xChannelSelector="R" yChannelSelector="G" />
+    </filter>
+    <filter id="inner-glow-blur-3"><feGaussianBlur stdDeviation="20" /></filter>
+    <clipPath id="projects-clip"><rect width="780" height="220" rx="24" /></clipPath>
+  </defs>
+
+  <g transform="translate(10, 10)">
+    <rect width="780" height="220" rx="24" fill="#ffffff" fill-opacity="0.05" />
+    <rect width="780" height="220" rx="24" fill="#ffffff" fill-opacity="0.05" filter="url(#glass-distortion-3)" opacity="0.8" />
+    <g clip-path="url(#projects-clip)">
+      <rect width="780" height="220" rx="24" fill="none" stroke="#999999" stroke-opacity="0.75" stroke-width="45" filter="url(#inner-glow-blur-3)" />
+    </g>
+    <rect width="780" height="220" rx="24" fill="none" stroke="#ffffff" stroke-opacity="0.2" stroke-width="1" />
+
+    <text x="35" y="42" fill="#ffffff" font-family="system-ui, -apple-system, sans-serif" font-size="18" font-weight="700">🚀 Featured Projects</text>
+
+    <!-- Project Item 1: videoG -->
+    <rect x="35" y="60" width="226" height="130" rx="14" fill="#ffffff" fill-opacity="0.08" stroke="#ffffff" stroke-opacity="0.15" />
+    <text x="55" y="90" fill="#3b82f6" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="600">videoG</text>
+    <text x="55" y="115" fill="#e0e6ed" fill-opacity="0.7" font-family="system-ui, -apple-system, sans-serif" font-size="12">Video Processing &amp; Web App</text>
+    <circle cx="60" cy="165" r="5" fill="#f1e05a" />
+    <text x="72" y="169" fill="#ffffff" fill-opacity="0.8" font-family="system-ui, -apple-system, sans-serif" font-size="11">JavaScript</text>
+
+    <!-- Project Item 2: winrdp -->
+    <rect x="276" y="60" width="226" height="130" rx="14" fill="#ffffff" fill-opacity="0.08" stroke="#ffffff" stroke-opacity="0.15" />
+    <text x="296" y="90" fill="#3b82f6" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="600">winrdp</text>
+    <text x="296" y="115" fill="#e0e6ed" fill-opacity="0.7" font-family="system-ui, -apple-system, sans-serif" font-size="12">Windows Remote Desktop Utility</text>
+    <circle cx="301" cy="165" r="5" fill="#38bdf8" />
+    <text x="313" y="169" fill="#ffffff" fill-opacity="0.8" font-family="system-ui, -apple-system, sans-serif" font-size="11">Systems / Shell</text>
+
+    <!-- Project Item 3: Dev.profile -->
+    <rect x="517" y="60" width="226" height="130" rx="14" fill="#ffffff" fill-opacity="0.08" stroke="#ffffff" stroke-opacity="0.15" />
+    <text x="537" y="90" fill="#3b82f6" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="600">Dev.profile</text>
+    <text x="537" y="115" fill="#e0e6ed" fill-opacity="0.7" font-family="system-ui, -apple-system, sans-serif" font-size="12">Personal Portfolio Page</text>
+    <circle cx="542" cy="165" r="5" fill="#e34c26" />
+    <text x="554" y="169" fill="#ffffff" fill-opacity="0.8" font-family="system-ui, -apple-system, sans-serif" font-size="11">HTML / CSS</text>
+  </g>
+</svg>
