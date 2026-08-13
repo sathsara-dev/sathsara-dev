@@ -27,8 +27,8 @@
     </g>
     <rect width="780" height="180" rx="24" fill="none" stroke="#ffffff" stroke-opacity="0.2" stroke-width="1" />
 
-    <!-- Profile Photo Avatar -->
-    <image href="https://github.com/sathsara-dev.png" x="33" y="48" width="84" height="84" preserveAspectRatio="xMidYMid slice" clip-path="url(#avatar-clip)" />
+    <!-- Local Profile Photo Reference (profile.jpg) -->
+    <image href="./profile.jpg" x="33" y="48" width="84" height="84" preserveAspectRatio="xMidYMid slice" clip-path="url(#avatar-clip)" />
     <!-- Blue Accent Ring around Photo -->
     <circle cx="75" cy="90" r="42" fill="none" stroke="#3b82f6" stroke-width="2.5" />
 
