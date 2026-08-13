@@ -27,8 +27,9 @@
     </g>
     <rect width="780" height="180" rx="24" fill="none" stroke="#ffffff" stroke-opacity="0.2" stroke-width="1" />
 
-    <!-- Local Profile Photo Reference (profile.jpg) -->
-    <image href="./profile.jpg" x="33" y="48" width="84" height="84" preserveAspectRatio="xMidYMid slice" clip-path="url(#avatar-clip)" />
+    <!-- Direct Raw GitHub Image Link (Fixes Broken Image Issue) -->
+    <image href="https://raw.githubusercontent.com/sathsara-dev/sathsara-dev/main/profile.jpg" x="33" y="48" width="84" height="84" preserveAspectRatio="xMidYMid slice" clip-path="url(#avatar-clip)" />
+    
     <!-- Blue Accent Ring around Photo -->
     <circle cx="75" cy="90" r="42" fill="none" stroke="#3b82f6" stroke-width="2.5" />
 
